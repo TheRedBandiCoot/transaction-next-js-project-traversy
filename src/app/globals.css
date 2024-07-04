@@ -7,6 +7,8 @@
 }
 
 body {
+  /* background-color: #060c1e; */
+  /* color: #bababa; */
   background-color: #f7f7f7;
   min-height: 100vh;
   margin: 0;
@@ -117,6 +119,25 @@ h4 {
   color: #c0392b;
 }
 
+.sign {
+  font-size: large;
+  margin-right: 0.2rem;
+  font-weight: bolder;
+}
+
+.delete-transaction-toaster {
+  div {
+    display: flex;
+    column-gap: 0.5rem;
+    .btn {
+      margin-bottom: 0.5rem;
+    }
+  }
+  h3 {
+    margin-top: 0;
+  }
+}
+
 label {
   display: inline-block;
   margin: 10px 0;
@@ -134,7 +155,7 @@ input[type='number'] {
 
 .btn {
   cursor: pointer;
-  background-color: #9c88ff;
+  background-color: #8870fc;
   box-shadow: var(--box-shadow);
   color: #fff;
   border: 0;
@@ -143,11 +164,29 @@ input[type='number'] {
   margin: 10px 0 30px;
   padding: 10px;
   width: 100%;
+  transition: all 0.3s;
+  &:hover {
+    background-color: #6b4dff;
+  }
 }
 
 .btn:focus,
 .delete-btn:focus {
   outline: 0;
+}
+.btn.btn-confirm {
+  background-color: #52d741;
+  transition: all 0.3s;
+  &:hover {
+    background-color: #47b239;
+  }
+}
+.btn.btn-danger {
+  background-color: #fa4f4f;
+  transition: all 0.3s;
+  &:hover {
+    background-color: #ce4040;
+  }
 }
 
 .list {

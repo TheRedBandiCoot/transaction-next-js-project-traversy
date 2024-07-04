@@ -27,7 +27,7 @@ export default function RootLayout({
         <body className={roboto.className}>
           <Header />
           <main className='container'>{children}</main>
-          <ToastContainer />
+          <ToastContainer stacked draggable style={{ userSelect: 'none' }} />
         </body>
       </html>
     </ClerkProvider>
